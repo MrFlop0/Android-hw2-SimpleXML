@@ -10,10 +10,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/LoginField"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColorHint="@color/hintColor"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/landLimit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/limit_of_LoginField">
 
@@ -22,15 +22,15 @@
             android:autofillHints="emailAddress"
             android:hint="@string/hintLogin"
             android:inputType="textEmailAddress"
-            android:textColor="@color/hintColor" />
+            android:textColorHint="@color/hintColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/PasswordField"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColorHint="@color/hintColor"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/landLimit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/LoginField"
         app:passwordToggleEnabled="true"
@@ -41,10 +41,11 @@
             android:autofillHints="no"
             android:hint="@string/hintPassword"
             android:inputType="textPassword"
-            android:textColor="@color/hintColor" />
+            android:textColorHint="@color/hintColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/alertBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/Alert"
@@ -52,14 +53,17 @@
         app:layout_constraintTop_toBottomOf="@id/PasswordField" />
 
     <android.widget.Button
+        android:id="@+id/LogInButton"
         style="@style/Button"
         android:text="@string/buttonText"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/PasswordField"
+        android:layout_marginBottom="6dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/button_limit" />
+        app:layout_constraintStart_toStartOf="@id/landLimit"
+        app:layout_constraintTop_toTopOf="@id/limit_of_LoginField" />
 
     <android.widget.Button
+        android:id="@+id/changeThemeButton"
         style="@style/Button"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -83,6 +87,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/landLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
