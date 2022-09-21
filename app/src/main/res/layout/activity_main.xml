@@ -9,41 +9,45 @@
     <EditText
         android:id="@+id/LoginField"
         style="@style/TextBox"
-        android:hint="@string/hintLogin"
         android:autofillHints="emailAddress"
+        android:hint="@string/hintLogin"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/limit_of_LoginField"
-        />
+        app:layout_constraintTop_toTopOf="@id/limit_of_LoginField" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/PasswordField"
-        style="@style/TextBox"
-        android:hint="@string/hintPassword"
-        android:autofillHints="no"
-        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/LoginField"
-         />
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            style="@style/TextBox"
+            android:autofillHints="no"
+            android:hint="@string/hintPassword"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
         android:textColor="@color/Alert"
-        android:text="aaaaaaaaaaaaaaa"
-        app:layout_constraintTop_toBottomOf="@id/PasswordField"
-        />
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/PasswordField" />
 
     <android.widget.Button
-        android:text="@string/buttonText"
         style="@style/Button"
+        android:text="@string/buttonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/button_limit" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/limit_of_LoginField"
