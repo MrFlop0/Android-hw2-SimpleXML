@@ -12,5 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/hintColor</item>
+        <item name="colorControlHighlight">@color/hintColor</item>
     </style>
 </resources>

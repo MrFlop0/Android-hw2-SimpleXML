@@ -4,17 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/MainBackground"
     tools:context=".MainActivity">
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/LoginField"
-        style="@style/TextBox"
-        android:autofillHints="emailAddress"
-        android:hint="@string/hintLogin"
-        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/limit_of_LoginField" />
+        app:layout_constraintTop_toTopOf="@id/limit_of_LoginField"
+        android:textColorHint="@color/hintColor"
+        >
+
+        <EditText
+            style="@style/TextBox"
+            android:autofillHints="emailAddress"
+            android:textColorHint="@color/hintColor"
+            android:hint="@string/hintLogin"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/PasswordField"
@@ -23,14 +34,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/LoginField"
-        app:passwordToggleEnabled="true">
+        android:textColorHint="@color/hintColor"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/hintColor">
 
         <EditText
             style="@style/TextBox"
             android:autofillHints="no"
             android:hint="@string/hintPassword"
-            android:inputType="textPassword"
-            />
+            android:textColorHint="@color/hintColor"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -47,6 +60,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/button_limit" />
+
+    <android.widget.Button
+        style="@style/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="0dp"
+        android:text="@string/changeTheme"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.Guideline

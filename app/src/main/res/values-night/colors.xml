@@ -9,9 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="hintColor">#000000</color>
-    <color name="textBox">#FFFFFF</color>
-    <color name="MainBackground">#FFFFFF</color>
+    <color name="hintColor">#FFFFFF</color>
+    <color name="textBox">#000000</color>
+    <color name="MainBackground">#FF000000</color>
     <color name="Alert">#FF0000</color>
-    <color name="ButtonColor">#B12828</color>
+    <color name="ButtonColor">#600E0E</color>
 </resources>
