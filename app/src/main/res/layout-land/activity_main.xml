@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="@id/limit_of_LoginField">
 
         <EditText
+            android:id="@+id/Login"
             style="@style/TextBox"
             android:autofillHints="emailAddress"
             android:hint="@string/hintLogin"
@@ -37,11 +38,13 @@
         app:passwordToggleTint="@color/hintColor">
 
         <EditText
+            android:id="@+id/Password"
             style="@style/TextBox"
             android:autofillHints="no"
             android:hint="@string/hintPassword"
             android:inputType="textPassword"
-            android:textColorHint="@color/hintColor" />
+            android:textColorHint="@color/hintColor"
+            android:imeOptions="actionDone"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView

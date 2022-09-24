@@ -3,5 +3,8 @@
     <string name="hintLogin">Enter Your Login</string>
     <string name="hintPassword">Enter Your Password</string>
     <string name="buttonText">Log In</string>
-    <string name="changeTheme">⟲</string>
+    <string name="changeTheme" translatable="false">⟲</string>
+    <string name="PasswordAlert">Wrong Password</string>
+    <string name="LoginAlert">Wrong Login</string>
+    <string name="Alert">Wrong Password or Login</string>
 </resources>
