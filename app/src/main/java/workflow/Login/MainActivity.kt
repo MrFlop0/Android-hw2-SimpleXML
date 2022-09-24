@@ -31,12 +31,12 @@ class MainActivity : AppCompatActivity() {
         when (view.id) {
 
             R.id.LogInButton -> {
-                if (Password.text.toString().isEmpty()) {
+                if (Password.text.toString().isEmpty() && Login.text.toString().isEmpty()) {
+                    alertBox.text = getString(R.string.Alert)
+                } else if (Password.text.toString().isEmpty()) {
                     alertBox.text = getString(R.string.PasswordAlert)
                 } else if (Login.text.toString().isEmpty()) {
                     alertBox.text = getString(R.string.LoginAlert)
-                } else {
-                    alertBox.text = getString(R.string.Alert)
                 }
             }
 
