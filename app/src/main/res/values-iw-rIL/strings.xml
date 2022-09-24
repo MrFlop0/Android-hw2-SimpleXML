@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Login</string>
-    <string name="hintPassword">הזן את הסיסמה</string>
-    <string name="hintLogin">הזן התחברות</string>
+    <string name="hintPassword">סיסמה</string>
+    <string name="hintLogin">דוֹאַר</string>
     <string name="buttonText">להיכנס</string>
     <string name="PasswordAlert">סיסמה שגויה</string>
     <string name="LoginAlert">התחברות לא חוקית</string>
