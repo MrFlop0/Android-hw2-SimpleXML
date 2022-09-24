@@ -27,6 +27,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Login.setText(savedInstanceState.getString("login"))
+        Password.setText(savedInstanceState.getString("password"))
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putString("login", Login.text.toString())
+        outState.putString("password", Password.text.toString())
+        super.onSaveInstanceState(outState)
+    }
+
     fun btnPressed(view: View) {
         when (view.id) {
 
